@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pullreq"
+version = "1.0.0"
+description = ""
+authors = []
+readme = 'README.md'
+
+[tool.poetry.scripts]
+console = "app_local:cli"
+
+[tool.poetry.dependencies]
+python = "^3.10.6"
+delta-spark = "3.1.0"
+pyspark = "3.5.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "7.4.0"
+pytest-mock = "3.11.1"
+pytest-depends = "1.0.1"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,4 @@
+/poetry.lock
+/.python-version
+/install-pyenv-win.ps1
+spark_warehouse/
