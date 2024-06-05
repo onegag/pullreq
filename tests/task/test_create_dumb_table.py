@@ -1,12 +1,12 @@
 import pytest
 
-from create_dumb_table import Creator
-from spark_session import spark_session_init
+from pullreq.sparkSession import spark_session_init
+from pullreq.task import Creator
 
 
 @pytest.fixture(scope="session")
 def spark():
-    warehouse_path = "./spark_warehouse"
+    warehouse_path = "../spark_warehouse"
     spark_session = spark_session_init(warehouse_path)
     yield spark_session
     spark_session.stop()
